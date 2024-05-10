@@ -40,7 +40,7 @@ Just a simple SQLite Database Reader for the Tomedo Database to View the content
 No Installer is available yet(Maybe never will be), so you need to download the Source Code and compile it yourself.
 
 Dependencies:
-- [Microsoft .Net 8.0 Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+- [Microsoft .Net 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 - Nuget Package [System.Data.SQLite](https://www.nuget.org/packages/System.Data.SQLite/).
 - Visual Studio 2022 or later.
 
