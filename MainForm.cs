@@ -13,6 +13,9 @@ namespace MedSQL_Reader
         public MainForm()
         {
             InitializeComponent();
+            dataGridView.ReadOnly = true;
+            KeyPreview = true;
+            KeyDown += MainForm_KeyDown;
         }
 
         private void btnOpenFile_Click(object sender, EventArgs e)
@@ -54,50 +57,65 @@ namespace MedSQL_Reader
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                string columnName = dataGridView.Columns[e.ColumnIndex].Name;
-                string content = dataGridView.Rows[e.RowIndex].Cells[columnName].Value.ToString();
-                panelTextFile.Controls.Clear();
+                DisplayContent(e.RowIndex, e.ColumnIndex);
+            }
+        }
 
-                if (IsRtf(content))
+        private void dataGridView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int rowIndex = dataGridView.SelectedCells[0].RowIndex;
+                int colIndex = dataGridView.SelectedCells[0].ColumnIndex;
+                DisplayContent(rowIndex, colIndex);
+            }
+        }
+
+        private void DisplayContent(int rowIndex, int colIndex)
+        {
+            string columnName = dataGridView.Columns[colIndex].Name;
+            string content = dataGridView.Rows[rowIndex].Cells[columnName].Value.ToString();
+            panelTextFile.Controls.Clear();
+
+            if (IsRtf(content))
+            {
+                RichTextBox richTextBox = new RichTextBox();
+                richTextBox.Dock = DockStyle.Fill;
+                richTextBox.Rtf = content;
+                panelTextFile.Controls.Add(richTextBox);
+            }
+            else if (IsCsv(content))
+            {
+                TextBox textBox = new TextBox();
+                textBox.Dock = DockStyle.Fill;
+                textBox.Multiline = true;
+                textBox.ScrollBars = ScrollBars.Vertical;
+                textBox.ReadOnly = true;
+
+                // Check if the content is in ZTX format (the ZTX-Format is normally a Unity thing, but I couldn't think of a different name.)
+                ZTXFormat ztxFormat = new ZTXFormat();
+                if (ztxFormat.IsValidZTX(content))
                 {
-                    RichTextBox richTextBox = new RichTextBox();
-                    richTextBox.Dock = DockStyle.Fill;
-                    richTextBox.Rtf = content;
-                    panelTextFile.Controls.Add(richTextBox);
-                }
-                else if (IsCsv(content))
-                {
-                    TextBox textBox = new TextBox();
-                    textBox.Dock = DockStyle.Fill;
-                    textBox.Multiline = true;
-                    textBox.ScrollBars = ScrollBars.Vertical;
-                    textBox.ReadOnly = true;
-
-                    // Check if the content is in ZTX format (ZTX is normally a Unity thing, but I couldn't think of a different name.)
-                    ZTXFormat ztxFormat = new ZTXFormat();
-                    if (ztxFormat.IsValidZTX(content))
-                    {
-                        List<Dictionary<string, string>> entries = ztxFormat.ParseLines(content);
-                        string formattedContent = ztxFormat.FormatContent(entries);
-                        textBox.Text = formattedContent;
-                    }
-                    else
-                    {
-                        textBox.Text = content;
-                    }
-
-                    panelTextFile.Controls.Add(textBox);
+                    List<Dictionary<string, string>> entries = ztxFormat.ParseLines(content);
+                    string formattedContent = ztxFormat.FormatContent(entries);
+                    textBox.Text = formattedContent;
                 }
                 else
                 {
-                    TextBox textBox = new TextBox();
-                    textBox.Dock = DockStyle.Fill;
-                    textBox.Multiline = true;
-                    textBox.ScrollBars = ScrollBars.Vertical;
-                    textBox.ReadOnly = true;
                     textBox.Text = content;
-                    panelTextFile.Controls.Add(textBox);
                 }
+
+                panelTextFile.Controls.Add(textBox);
+            }
+            else
+            {
+                TextBox textBox = new TextBox();
+                textBox.Dock = DockStyle.Fill;
+                textBox.Multiline = true;
+                textBox.ScrollBars = ScrollBars.Vertical;
+                textBox.ReadOnly = true;
+                textBox.Text = content;
+                panelTextFile.Controls.Add(textBox);
             }
         }
 
@@ -111,5 +129,14 @@ namespace MedSQL_Reader
             return text.Contains(",") || text.Contains("\t");
         }
 
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                int rowIndex = dataGridView.SelectedCells[0].RowIndex;
+                int colIndex = dataGridView.SelectedCells[0].ColumnIndex;
+                DisplayContent(rowIndex, colIndex);
+            }
+        }
     }
 }

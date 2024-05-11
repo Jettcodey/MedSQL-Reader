@@ -84,7 +84,7 @@
             label2.TabIndex = 7;
             label2.Text = "Data/Content:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
+            //  
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -112,6 +112,6 @@
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Panel panelTextFile;
         private System.Windows.Forms.Label label1;
-        private Label label2;
+        private System.Windows.Forms.Label label2;
     }
 }

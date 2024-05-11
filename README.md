@@ -37,7 +37,7 @@ Just a simple SQLite Database Reader for the Tomedo Database to View the content
 <!-- Installation -->
 ## Installation
 
-No Installer is available yet(Maybe never will be), so you need to download the Source Code and compile it yourself.
+There is no Installer available yet(Maybe never will be), so you need to download the Source Code and compile it yourself.
 
 Dependencies:
 - [Microsoft .Net 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
@@ -58,9 +58,9 @@ If u double click on an entry, you can see all the Data in the right TextBox.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add a Search, Save and Filter Function.
-- [ ] Make the Data Stored in "ZADDITIONALTEXT" more readable.
-- [ ] Add the "ZPATIENT" Table to the Reader and connect the Data to the right Key.
+- [ ] Add a Search, Edit/Save and Filter Function.
+- [ ] Make the Data Stored in "ZADDITIONALTEXT" more like in the Tomedo App.
+- [ ] Add the "ZPATIENT" Database to the Reader so u see the Name of the Patient your currently Viewing.
 - [ ] Make the Application more User-Friendly.
 
 See the [open issues](https://github.com/Jettcodey/MedSQL-Reader/issues) for a full list of proposed features (and known issues).
