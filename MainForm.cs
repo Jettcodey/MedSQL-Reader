@@ -73,7 +73,7 @@ namespace MedSQL_Reader
                     textBox.ScrollBars = ScrollBars.Vertical;
                     textBox.ReadOnly = true;
 
-                    // Check if the content is in ZTX format (ZTX is normally a unity thing, but I couldn't think of a different name.)
+                    // Check if the content is in ZTX format (ZTX is normally a Unity thing, but I couldn't think of a different name.)
                     ZTXFormat ztxFormat = new ZTXFormat();
                     if (ztxFormat.IsValidZTX(content))
                     {

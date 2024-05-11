@@ -55,10 +55,10 @@
             // 
             panelTextFile.BackColor = Color.Silver;
             panelTextFile.BorderStyle = BorderStyle.FixedSingle;
-            panelTextFile.Location = new Point(624, 45);
+            panelTextFile.Location = new Point(649, 45);
             panelTextFile.Margin = new Padding(4, 3, 4, 3);
             panelTextFile.Name = "panelTextFile";
-            panelTextFile.Size = new Size(420, 554);
+            panelTextFile.Size = new Size(550, 554);
             panelTextFile.TabIndex = 6;
             // 
             // label1
@@ -68,9 +68,9 @@
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(200, 24);
             label1.Name = "label1";
-            label1.Size = new Size(58, 15);
+            label1.Size = new Size(61, 15);
             label1.TabIndex = 0;
-            label1.Text = "SQL Table";
+            label1.Text = "SQL Table:";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -78,11 +78,11 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(624, 24);
+            label2.Location = new Point(649, 24);
             label2.Name = "label2";
             label2.Size = new Size(82, 15);
             label2.TabIndex = 7;
-            label2.Text = "Data/Content ";
+            label2.Text = "Data/Content:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // MainForm
@@ -90,7 +90,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bg;
-            ClientSize = new Size(1057, 613);
+            ClientSize = new Size(1215, 613);
             Controls.Add(label2);
             Controls.Add(panelTextFile);
             Controls.Add(btnOpenFile);
