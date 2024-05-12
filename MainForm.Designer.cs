@@ -101,7 +101,7 @@
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
             Name = "MainForm";
-            Text = "MedSQL Reader by Jettcodey";
+            Text = "MedSQL Reader v1.0.1 by Jettcodey";
             ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
