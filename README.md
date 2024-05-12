@@ -28,7 +28,7 @@ C#
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-## ! Im not Affiliated with Tomedo/Zollsoft in any way !
+## ⚠Im not Affiliated with Tomedo/Zollsoft in any way⚠
 ### For educational purposes only!
 
 Just a simple SQLite Database Reader for the Tomedo SQLite Database "ServerEntities" to View the contents of the Index entries on Windows.
