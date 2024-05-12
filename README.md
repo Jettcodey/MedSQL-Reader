@@ -28,9 +28,10 @@ C#
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-### For educational purposes only! Im not Affiliated with Tomedo/Zollsoft in any way!
+## ! Im not Affiliated with Tomedo/Zollsoft in any way !
+### For educational purposes only!
 
-Just a simple SQLite Database Reader for the Tomedo Database to View the contents of "ZTEXT" and "ZADDITIONALTEXT" on Windows.
+Just a simple SQLite Database Reader for the Tomedo SQLite Database "ServerEntities" to View the contents of the Index entries on Windows.
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
@@ -51,7 +52,7 @@ Dependencies:
 
 After Compiling the Source Code, you can start the Application and select the ServerEntities.sqlite file from the Tomedo Database Location.
 
-If u double click on an entry, you can see all the Data in the right TextBox.
+If u double click/Hit Enter on an entry, you can see all the Data in the right TextBox.
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
