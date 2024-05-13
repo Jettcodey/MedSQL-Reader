@@ -31,13 +31,14 @@ namespace MedSQL_Reader
                         connection.Open();
 
                         string tableName = "ZKARTEIEINTRAG";
-                        string query = $"SELECT [ZADDITIONALTEXT], [ZTEXT] FROM [{tableName}]";
+                        string query = $"SELECT [ZIDENT], [ZADDITIONALTEXT], [ZTEXT] FROM [{tableName}] ORDER BY [ZIDENT] ASC";
 
                         SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, connection);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
                         dataGridView.DataSource = dataTable;
+                        dataGridView.Columns["ZIDENT"].Width = 135;
                         dataGridView.Columns["ZTEXT"].Width = 271;
                         dataGridView.Columns["ZADDITIONALTEXT"].Width = 271;
                     }
@@ -52,6 +53,7 @@ namespace MedSQL_Reader
                 }
             }
         }
+
 
         private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

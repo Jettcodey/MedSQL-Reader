@@ -32,7 +32,7 @@
             dataGridView.Location = new Point(13, 45);
             dataGridView.Margin = new Padding(4, 3, 4, 3);
             dataGridView.Name = "dataGridView";
-            dataGridView.Size = new Size(602, 554);
+            dataGridView.Size = new Size(771, 554);
             dataGridView.TabIndex = 0;
             dataGridView.CellDoubleClick += dataGridView_CellDoubleClick;
             // 
@@ -55,10 +55,10 @@
             // 
             panelTextFile.BackColor = Color.Silver;
             panelTextFile.BorderStyle = BorderStyle.FixedSingle;
-            panelTextFile.Location = new Point(649, 45);
+            panelTextFile.Location = new Point(806, 45);
             panelTextFile.Margin = new Padding(4, 3, 4, 3);
             panelTextFile.Name = "panelTextFile";
-            panelTextFile.Size = new Size(550, 554);
+            panelTextFile.Size = new Size(564, 554);
             panelTextFile.TabIndex = 6;
             // 
             // label1
@@ -78,19 +78,19 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(649, 24);
+            label2.Location = new Point(806, 24);
             label2.Name = "label2";
             label2.Size = new Size(82, 15);
             label2.TabIndex = 7;
             label2.Text = "Data/Content:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            //  
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bg;
-            ClientSize = new Size(1215, 613);
+            ClientSize = new Size(1383, 611);
             Controls.Add(label2);
             Controls.Add(panelTextFile);
             Controls.Add(btnOpenFile);
