@@ -15,6 +15,8 @@
   </ol>
 </details>
 
+>[!NOTE]
+>The development of this project will not be continued and has been Postponed indefinitely.
 
 ### Built With
 C# 
@@ -33,7 +35,7 @@ C#
 
 Just a simple SQLite Database Reader for the Tomedo SQLite Database "ServerEntities" to View the contents of the Index entries on Windows.
 
-<p align="right"><a href="#readme-top">Back to top</a></p>
+<p align="right"><a href="#medsql-reader">Back to top</a></p>
 
 <!-- Installation -->
 ## Installation
@@ -45,7 +47,7 @@ Dependencies:
 - Nuget Package [System.Data.SQLite](https://www.nuget.org/packages/System.Data.SQLite/).
 - Visual Studio 2022 or later.
 
-<p align="right"><a href="#readme-top">Back to top</a></p>
+<p align="right"><a href="#medsql-reader">Back to top</a></p>
 
 <!-- Usage -->
 ## Usage
@@ -54,10 +56,13 @@ After Compiling the Source Code, you can start the Application and select the Se
 
 If u double click/Hit Enter on an entry, you can see all the Data in the right TextBox.
 
-<p align="right"><a href="#readme-top">Back to top</a></p>
+<p align="right"><a href="#medsql-reader">Back to top</a></p>
 
 <!-- ROADMAP -->
 ## Roadmap
+
+>[!NOTE]
+>The development of this project will not be continued and has been Postponed indefinitely.
 
 - [ ] Add a Search, Edit/Save and Filter Function.
 - [ ] Make the Data Stored in "ZADDITIONALTEXT" more like in the Tomedo App.
@@ -66,4 +71,4 @@ If u double click/Hit Enter on an entry, you can see all the Data in the right T
 
 See the [open issues](https://github.com/Jettcodey/MedSQL-Reader/issues) for a full list of proposed features (and known issues).
 
-<p align="right"><a href="#readme-top">Back to top</a></p>
+<p align="right"><a href="#medsql-reader">Back to top</a></p>
